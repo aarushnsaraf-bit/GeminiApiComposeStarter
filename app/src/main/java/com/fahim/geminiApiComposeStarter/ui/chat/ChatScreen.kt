@@ -240,6 +240,7 @@ private fun MessageList(
                 text = responsePlaceholder.ifEmpty { stringResource(R.string.response_placeholder) }
                     .toBoldAnnotatedString(),
                 fontSize = 18.sp,
+                color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(8.dp),
             )
         }

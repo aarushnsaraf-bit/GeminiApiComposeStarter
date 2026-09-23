@@ -25,13 +25,15 @@ class ChatViewModel(
     init {
         viewModelScope.launch {
             repository.getChatHistory().collect { entities ->
-                val chatMessages = entities.map { entity ->
-                    ChatMessage(
-                        id = entity.id,
-                        sender = entity.sender,
-                        content = SecurityUtils.decrypt(entity.content),
-                        timestamp = entity.timestamp,
-                    )
+                val chatMessages = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                    entities.map { entity ->
+                        ChatMessage(
+                            id = entity.id,
+                            sender = entity.sender,
+                            content = SecurityUtils.decrypt(entity.content),
+                            timestamp = entity.timestamp,
+                        )
+                    }
                 }
                 _uiState.update { it.copy(messages = chatMessages) }
             }
