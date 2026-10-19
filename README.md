@@ -1,4 +1,6 @@
-# Reactive Priority To-Do List App (Jetpack Compose & Firebase Realtime Database)
+# Assignment 2: Reactive Priority To-Do List App
+## Jetpack Compose & Firebase Realtime Database
+
 
 **Mobile Application Development Assignment**  
 **Subject Code:** 702AI0E002  
@@ -268,3 +270,15 @@ Completing this practical assignment provided comprehensive hands-on experience 
 1. **Limited Querying & Sorting:** Firebase Realtime Database can only sort or filter on a single property at a time on the server. Multi-level sorting (e.g., sort by priority first, then by timestamp) must be performed client-side in Kotlin.
 2. **Bandwidth-Heavy on Large Trees:** Because data is stored as a single JSON tree, reading a parent node retrieves all child nodes and attributes, which can lead to unnecessary data usage if task attachments or subtasks grow large.
 3. **Vendor Lock-in:** The application relies on Google Play Services and proprietary Firebase SDK APIs, making it harder to migrate to generic self-hosted backends compared to standard REST/GraphQL solutions.
+
+
+## Screenshots
+
+### 1. Main To-Do Screen
+![Main To-Do Screen](screenshots/todo-main.png)
+
+### 2. Task Priorities
+![Task Priorities](screenshots/task-priorities.png)
+
+### 3. Firebase Realtime Database
+![Firebase Realtime Database](screenshots/firebase-database.png)
