@@ -1,4 +1,6 @@
-# Reactive Priority To-Do List App (Jetpack Compose & Firebase Realtime Database)
+# Assignment 2: Reactive Priority To-Do List App
+## Jetpack Compose & Firebase Realtime Database
+
 
 **Mobile Application Development Assignment**  
 **Subject Code:** 702AI0E002  
