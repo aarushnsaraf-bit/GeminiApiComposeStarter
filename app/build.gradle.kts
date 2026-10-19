@@ -6,6 +6,11 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+// Automatically apply Google Services plugin when google-services.json is present
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+}
+
 // Read the Gemini API key from local.properties (git-ignored) so it never lands in VCS.
 val localProperties = Properties().apply {
     val file = rootProject.file("local.properties")
@@ -76,6 +81,14 @@ dependencies {
 
     // Gemini AI SDK
     implementation(libs.google.generativeai)
+
+    // Firebase BoM & Realtime Database
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.database)
+    implementation(libs.kotlinx.coroutines.play.services)
+
+    // Material Icons Extended
+    implementation(libs.androidx.compose.material.icons.extended)
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)

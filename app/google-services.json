@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "846887703546",
+    "project_id": "mad-602ae",
+    "storage_bucket": "mad-602ae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846887703546:android:acd0a53cfcb0f631a9ca43",
+        "android_client_info": {
+          "package_name": "com.fahim.geminiApiComposeStarter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2osxWTInLtijkK8gVa09jA7T0l6N80Fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
